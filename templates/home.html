@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head class="page-header">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+
+    html,body { 
+        background-image: url('/static/img/aa.jpg');
+        text-align: center;
+        }
+    div {
+        background-color: rgba(255, 255, 255, 0.445);
+        border-radius: 25px;
+        width: 50%;
+        padding : 50px;
+        margin: auto;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 20px;
+    }
+    h1 {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, 'Arial Narrow', Arial, sans-serif;
+        font-size: 70px;
+        color: rgb(255, 255, 255);
+    }
+    head {
+        background-color: rgb(150, 194, 194);
+    }
+    div.jumbotron{
+        margin-bottom:2cm;
+        width :100%;
+        background-color:rgb(54, 54, 54);
+    }
+    </style>
+</head>
+<body>
+    <div class="jumbotron ">
+        <h1>Soil Testing System </h1>
+	</div>		
+    <div class="container">
+    <p style="font-size: 25px;font-weight:bold;">Drop your soil image, here:<br>
+    </p>
+   <form action = "/result" method = "post" enctype="multipart/form-data">  
+        <input type="file" name="file" />  
+        <input type = "submit" value="Upload">  
+    </form>  
+    </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head class="page-header">
+    <title>Soil Testing System</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">	
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        html,body { 
+            background-image: url('/static/img/aa.jpg');
+            text-align: center;
+            }
+        div {
+            background-color: aliceblue;
+            border-radius: 15px;
+            width: 50%;
+            padding : 50px;
+            margin: auto;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 20px;
+        }
+        h1 { 
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, 'Arial Narrow', Arial, sans-serif;
+            font-size: 60px;
+            color: rgb(255, 255, 255)
+        }
+        head {
+            background-color: rgb(240, 248, 248);
+        }
+        div.jumbotron{
+            margin-bottom:1cm;
+            width :100%;
+            background-color:rgb(54, 54, 54);
+        }
+        h2 a {
+                color: #C25100;
+        }
+    p{
+        color:rgb(247, 8, 8)
+    }
+    p1{
+        color:#5008f7
+    }
+</style>
+</head>
+<body>
+    <div class="jumbotron ">
+        <h1>Soil Testing System </h1>   
+    </div>
+    <h1 id="display"></h1>
+    <script>
+                document.getElementById("display").innerHTML= "Your soil:category"+'{{result}}';			
+    </script>
+        <div class="page-header">
+            <button  type="submit"  class="btn btn-dark"><a href="/">HOME</a></button>
+            <p>Below table shows your soil macro and micronutrients,Those data are belongs to your soil class ,check your soil fertility </p>
+            <p>Note !! This soil data belongs to puthuru and sullia</p>
+            <p1>with the help from Govt. Soil testing center, Mangalore</p1>
+        </div>
+            <br>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                     {% block content %}
+                     {{data | safe}}
+                     {% endblock %}
+                </div>
+                </div>
+                </div>   
+                <br><div>
+                    <form action = "/fertility" method = "post" enctype="multipart/form-data"> 
+                        <p>About soil descrption</p> 
+                        <button type="submit" class="btn btn-info" >Info</button>
+                    </button>
+                    </form>
+                </div>   
+</body>
+</html>
